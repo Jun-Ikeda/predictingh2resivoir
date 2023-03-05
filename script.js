@@ -11,9 +11,9 @@ function init() {
   }).addTo(map);
   data.forEach(function (cell) {
     if (0 < cell[5] && cell[5] < 10) {
-      L.rectangle([[cell[1],cell[0]],[cell[1]+1,cell[0]+1]], {color: colorLevelTen[cell[5]-1], weight: 1}).addTo(map);
+      L.rectangle([[cell[1],cell[0]],[cell[1]+1,cell[0]+1]], {color: colorLevelTen[cell[5]-1], weight: 1}).addTo(map).bindPopup(`Sudoite localities: ${cell[2]}, Kaolinite localities: ${cell[3]}, Illite occurrences: ${cell[4]}`)
     } else if (10 <= cell[5]) {
-      L.rectangle([[cell[1],cell[0]],[cell[1]+1,cell[0]+1]], {color: colorLevelTen[9], weight: 1}).addTo(map);
+      L.rectangle([[cell[1],cell[0]],[cell[1]+1,cell[0]+1]], {color: colorLevelTen[9], weight: 1}).addTo(map).bindPopup(`Sudoite localities: ${cell[2]}, Kaolinite localities: ${cell[3]}, Illite occurrences: ${cell[4]}`);
     }
   });
   // L.rectangle([[35,135],[40,140]], {color: "#ff7800", weight: 1}).addTo(map);

@@ -1,1 +1,19 @@
-#mapcontainer { height: 500px; }
+body {
+  height: 100vh;
+  flex-direction: row;
+}
+#container {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  flex-direction: row;
+}
+#mapcontainer {
+  height: 100%;
+  width: 98%;
+}
+#keycontainer {
+  height: 100%;
+  width: 2%;
+  background-color: blue;
+}
